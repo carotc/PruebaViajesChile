@@ -1,15 +1,16 @@
 #navegador {
 
   background-color:  #2a9ca7;
-
 }
 
-body{
-  background-color: black;
+body {
+    background-color: black;
+    font-family: "Scope One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .containers {
-
 background-color: black !important;  
 }
 
