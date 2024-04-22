@@ -1,5 +1,5 @@
 
-// SCROLL NAV
+// SCROLL NAV //
 window.addEventListener("scroll", () => {
     const nav = document.getElementById('nav');
     (window.scrollY > 40)
@@ -10,4 +10,18 @@ window.addEventListener("scroll", () => {
 // Tooltip de bootstrap //
 $(document).ready(function () {
     $('[data-bs-toggle="tooltip"]').tooltip()
+})
+
+// FORMULARIO //
+document.getElementById("formulario").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const date = new Date(Date.now());
+  const popup = document.getElementById('popup');
+  document.getElementById("date").textContent = date.toLocaleString();
+  const toast = bootstrap.Toast.getOrCreateInstance(popup);
+  toast.show()
+  setTimeout(() => {
+      toast.hide()
+  }, 2500)
+  e.target.reset();
 })

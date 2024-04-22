@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +10,11 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/viajes.svg" type="image/favicon">
-    <!-- Google Fonts: Scope One -->
+<!-- Google Fonts: Scope One -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
-  <!-- MI CSS -->
+<!-- MI CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -44,13 +45,13 @@
        <div id="carouselExampleFade" class="carousel slide carousel-fade" weight="100%">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/img/header.jpeg" class="d-block w-100" alt="norte">
+          <img src="assets/img/header.jpeg" class="d-block w-100" loading="lazy"  alt="norte">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/moais.jpeg" class="d-block w-100" alt="isla de pascua">
+          <img src="assets/img/moais.jpeg" class="d-block w-100" loading="lazy" alt="isla de pascua">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/pinguino.jpeg" class="d-block w-100" alt="pinguino">
+          <img src="assets/img/pinguino.jpeg" class="d-block w-100" loading="lazy" alt="pinguino">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -64,7 +65,8 @@
     </div>
   </header>
  
-<!-- QUIENES SOMOS -->
+<!-- SECCION PRESENTACION -->
+
 <section class="py-5 container d-none d-lg-block text-light" id="quienes-somos">
   <h2 class="text-center text-uppercase my-3">¿QUIENÉS SOMOS?</h2>
   <hr class="text-secondary mb-4">
@@ -107,7 +109,8 @@
 </section>
 
 
-  <!-- IMAGENES -->
+  <!-- IMAGENES DESTACADOS -->
+
   <section class="py-5 container d-none d-lg-block text-light" id="destacados">
     <h2 class="text-center text-uppercase my-2">DESTACADOS</h2>
        <hr class="text-secondary mb-4">
@@ -160,37 +163,50 @@
   </section>
 </section>
 
-  <section class="py-5 container d-none d-lg-block text-light" id="contacto">
-   <h2 class="text-center text-uppercase my-3">CONTACTO</h2>
-      <hr class="text-secondary mb-4">
-    
-      <section id="contacto" class= "py-5" height="40%">
-        <div class="container">
-         <form>
-          <form class="mt-4">
-            <div class="mb-3">
-              <label for="name" class="form-label">Nombre</label>
-             <input type="text" class="form-control" id="nombre">
-            </div>
-            <div class="mb-3">
-              <label for="asunto" class="form-label">Asunto</label>
-              <input type="asunto" id="asunto" class="form-control" >
-            </div>
+<!--FORMULARIO-->
+
+<section class="py-5 container text-light" id="contacto">
+  <h2 class="text-center text-uppercase my-3">Contacto</h2>
+  <hr class="text-secondary mb-4">
+  <div class="row">
+      <div class="col-10 col-lg-12 mx-auto">
+          <form action="" id="formulario" class="mt-4">
               <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="mensaje" rows="3"></textarea>
-            </div>
-            <div class="text">
-              <button type="submit" class="btn btn-info text-white">Enviar</button>
-            </div>
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input id="nombre" type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                  <label for="asunto" class="form-label">Asunto</label>
+                  <input id="asunto" type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea id="mensaje" cols="30" rows="10" class="form-control" required></textarea>
+              </div>
+              <button class="btn btn-info text-light" data-bs-toggle="tooltip"
+                  data-bs-title="Enviar mensaje">Enviar</button>
           </form>
-        </div>
-    
-      </section>
-    </section>
+      </div>
+  </div>
+</section>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="popup" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="assets/img/viajes.svg" class="rounded me-2" alt="icono" height="20">
+      <strong class="me-auto text-uppercase">Información</strong>
+      <small id="date"></small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body text-secondary">
+      Se envió su correo exitosamente
+      <i class="fa-solid fa-envelope fa-bounce text-success"
+        style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i>
+    </div>
+</div>
+</div>
 
-
-      <footer class="bg-info container-fluid py-3 text-light">
+  <!--FOOTER-->
+    <footer class="bg-info container-fluid py-3 text-light">
         <div class="row text-center align-items-center">
             <div class="col-10 col-md-6 fs-4 mx-auto">
                 VIAJES CHILE
